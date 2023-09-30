@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# checks for SIGTERM signal
+
+trap 'echo "I am invisible!!!"' 15
+while true
+do
+	echo "To infinity and beyond"
+	sleep 2
+done
