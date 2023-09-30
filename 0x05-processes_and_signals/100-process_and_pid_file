@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# sence a signal
+
+function fun()
+{
+	rm /var/run/myscript.pid
+	exit
+}
+
+trap "echo 'I hate the kill command;fun" SIGTERM
+trap "echo Y U no love me?!;fun" SIGINT
+
+echo $$ >> /var/run/myscript.pid
+while true
+do
+	echo "To infinity and beyond"
+done
