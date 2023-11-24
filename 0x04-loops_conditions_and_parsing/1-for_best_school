@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# This script print a string ten times
+
+for _ in $(seq 10); do
+	echo 'Best School'
+done
