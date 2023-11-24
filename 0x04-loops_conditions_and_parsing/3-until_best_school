@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# prints a string with until loop
+
+COUNT=0
+
+until [ $COUNT -ge 10 ]; do
+	echo 'Best School';
+	((COUNT++));
+done
