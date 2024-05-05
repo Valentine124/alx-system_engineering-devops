@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Configure nginx and add header
+
+sudo apt-get upgrade
+sudo install -y nginx
+sudo ufw allow "Nginx HTTP"
+sudo service nginx start
+sed -i "/server_name _;/a \ \n \ \ \ \ 'add_header X-Served-By \$hostname;'" /etc/nginx/sites-available/defaut
+sudo service nginx restart
