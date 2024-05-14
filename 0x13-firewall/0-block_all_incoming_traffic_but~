@@ -1,5 +1,5 @@
 sudo apt install ufw
-sudo ufw enable
 sudo ufw allow tcp from any to any 22
 sudo ufw allow tcp from any to any 443
 sudo ufw allow tcp from any to any 80
+sudo ufw enable
