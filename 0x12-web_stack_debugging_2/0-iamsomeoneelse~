@@ -9,7 +9,8 @@ fi
 IS_USER=$(grep -c "$1" /etc/passwd)
 
 if [ "$IS_USER" ]; then
-	su -c whoami $1
+	su -c whoami "$1"
+	echo "$1"
 else
 	exit
 fi
