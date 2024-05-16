@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 # Run a command with a different user
 
-if [ $# -lt 1 ]; then
+if [ "$#" -lt 1 ]; then
 	whoami
 	exit
 fi
 
-IS_USER=`grep -c $1 /etc/passwd`
+IS_USER=$(grep -c "$1" /etc/passwd)
 
-if [ $IS_USER ]; then
-	su -c whoami $1
+if [ "$IS_USER" ]; then
+	su -c whoami "$1"
 else
 	exit
 fi
