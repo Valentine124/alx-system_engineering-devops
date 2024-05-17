@@ -6,11 +6,13 @@ if [ "$#" -lt 1 ]; then
 	exit
 fi
 
-IS_USER=$(grep -c "$1" /etc/passwd)
+HOME="/"
+NAME= $(echo "$1" | sed "s/["$HOME"]//g")
+IS_USER=$(grep -c "$NAME" /etc/passwd)
 
 if [ "$IS_USER" ]; then
-	su -c whoami "$1"
-	echo "$1"
+	su -c whoami $NAME
+	echo $NAME
 else
 	exit
 fi
