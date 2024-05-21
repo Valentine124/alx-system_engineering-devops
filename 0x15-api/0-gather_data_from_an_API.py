@@ -28,7 +28,7 @@ if __name__ == "__main__":
             titles.append(todo.get("title"))
 
     print(f'Employee {user.get("name")} is done '
-          f'with task({task_done}/{total_task}):')
+          f'with tasks({task_done}/{total_task}):')
 
     for title in titles:
         print(f'\t {title}')
