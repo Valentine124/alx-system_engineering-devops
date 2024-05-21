@@ -3,6 +3,8 @@
 """
 Contains a script that
 make a request from an API
+and print the reponse to the 
+std output
 """
 
 
