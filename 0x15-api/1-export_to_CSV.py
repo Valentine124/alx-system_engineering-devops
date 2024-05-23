@@ -18,7 +18,7 @@ if __name__ == "__main__":
 
     user = user_re.json()
     todos = todo_req.json()
-    FILE = 'USER_ID.csv'
+    FILE = f'{user.get("id")}.csv'
 
     with open(FILE, 'w', newline='') as file:
         csv_writer = csv.writer(file, quotechar='"', quoting=csv.QUOTE_ALL)
