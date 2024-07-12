@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 # Configure HAProxy
 sudo apt update
 sudo apt upgrade -y
